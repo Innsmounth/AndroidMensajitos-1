@@ -190,6 +190,7 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val maper = ObjectMapper()
             val respuesta = restTemplate.getForObject(url2,  String::class.java)
             mensajes = maper.readValue(respuesta, object : TypeReference<ArrayList<Mensaje>>(){})
+            // mensajes = maper.readValue(respuesta, Mensaje :: java.class)
 
 
             println("DESPUES DE REST");
